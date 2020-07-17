@@ -6,6 +6,7 @@ from django.views import generic
 from .models import Question, Choice
 # Create your views here.
 class IndexView(generic.ListView):
+    template_name='index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
@@ -34,4 +35,4 @@ def vote(request, question_id):
         selected_choice.vote += 1
         selected_choice.save()
 
-    return HttpResponseRedirect(reverse('results', args=(question.id,)))
+    return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
