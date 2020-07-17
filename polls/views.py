@@ -6,7 +6,6 @@ from django.views import generic
 from .models import Question, Choice
 # Create your views here.
 class IndexView(generic.ListView):
-    template_name = 'index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
