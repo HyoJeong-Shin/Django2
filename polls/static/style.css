@@ -1,0 +1,9 @@
+body{
+    background: white url("background.png") no-repeat;
+    background-size: cover;
+}
+
+li a {
+    color : white;
+    font-size: 25px;
+}
